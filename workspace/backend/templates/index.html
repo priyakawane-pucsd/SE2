@@ -1,0 +1,137 @@
+<!--
+<!DOCTYPE html>  
+    <html>  
+    <head>  
+        <title>home</title>  
+    </head>  
+    <body>  
+        <h2>Hi, welcome to the website</h2> 
+        <a href ="/view">List Records</a><br><br> 
+    </body>  
+    </html>  
+-->
+
+<!--
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000080;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #000080;
+}
+</style>
+</head>
+<body>
+
+<ul>
+ <li><a href="/home"><i class="fa fa-home"></i> Home</a></li>
+  <li><a href="/view"><i class="fa fa-bars"></i> List Records</a></li>
+  <li><a href="/search"><i class="fa fa-fw fa-search"></i>Employees Leave Details</a></li>
+  <!--<li><a href="#about">About</a></li>--1>
+</ul>
+
+</body>
+
+ <body>
+    <center><h1>Welcome To Employee Leave Management System</h1></center>  
+  </body>
+
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Simple Login Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+
+	body{
+	
+		background-image: url(../static/back2.jpg);
+		background-repeat: no-repeat;
+  		background-attachment: fixed;
+  		background-size: cover;
+    }	
+	
+	.login-form {
+		width: 400px;
+    	margin: 70px auto;
+	}
+    .login-form form {
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 50px;
+        border-radius: 3px;
+    }
+    .btn {        
+        font-size: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+<div class="login-form">
+    <form action="" method="post">
+        <h2 class="text-center">Log in</h2>       
+        <div class="form-group">
+	       <input type="text" class="form-control" placeholder="Username" name="username" value="{{
+			request.form.username}}" required="required">
+        </div>
+        <div class="form-group">
+		   <input type="password" class="form-control" placeholder="Password" name="password" 
+			value="{{request.form.password}}"required="required">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"><a href="/home">Log in</a></button>
+        </div>     
+    </form>	
+
+{% if error %}
+	<p class="error"><strong>Error!</strong> {{ error }}</p>
+{% else %}
+		<p class="success"> {{ success }}</p>
+{% endif %}
+
+</div>
+</body>
+</html>                                		

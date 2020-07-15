@@ -1,0 +1,244 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#000080;
+}
+
+li {
+  float: left;
+}
+
+b {
+  float: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #000080;
+}
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 20 20px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 300px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<ul>
+  <li><a href="/home"><i class="fa fa-home"></i> Home</a></li>
+  <li><a href="/view"><i class="fa fa-bars"></i> List Records</a></li>
+  <li><a href="/search"><i class="fa fa-fw fa-search"></i>Employees Leave Details</a></li>
+  <li><a href="/statistic"><i class="fa fa-area-chart"></i>Leave Type Statistic</a></li>	
+  <li><a href="/update"><i class="fa fa-area-chart"></i>Leave Status Statistic</a></li>
+  <li><a href="/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+
+  <!--<li><a href="#about">About</a></li>-->
+</ul>
+
+</body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <body>
+
+<div class="row">
+
+  <div class="column">
+  <div class="w3-card">
+		<div id="piechart"></div>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['leave', 'Hours per Day'],
+  ['work from home', 8],
+  ['Paid leave', 4],
+  ['Sick leave', 5],
+  ['Casual leave', 1],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Average Day', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+  </div>
+  </div>
+
+
+
+
+  <div class="column">
+  <div class="w3-card">
+<div id="piechart"></div>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['leave', 'Hours per Day'],
+  ['Total leave', 10],
+  ['Leave approved', 7],
+  ['Pending leave', 5],
+  ['Rejected leave', 4],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Leave Status Statistic', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+  </div>
+  </div>
+
+</div>
+  
+
+<!--
+<div class="row">
+
+ <div class="column">
+ <div class="w3-card">
+ <div id="piechart"></div>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['leave', 'Hours per Day'],
+  ['work from home', 8],
+  ['Paid leave', 4],
+  ['Sick leave', 5],
+  ['Casual leave', 1],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Average Day', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</div>
+</div>
+
+  <div class="column">
+  <div class="w3-card">
+  <div id="piechart"></div>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['leave', 'Hours per Day'],
+  ['work from home', 8],
+  ['Paid leave', 4],
+  ['Sick leave', 5],
+  ['Casual leave', 1],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Average Day', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</div>
+</div>
+-->
+</body>
+</html>
+
